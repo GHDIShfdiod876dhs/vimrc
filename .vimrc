@@ -20,3 +20,7 @@ set t_Co=256
 set softtabstop=3
 set shiftwidth=3
 set noexpandtab
+
+set foldcolumn=4
+set hls
+set history=200
