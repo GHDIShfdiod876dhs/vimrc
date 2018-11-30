@@ -60,8 +60,8 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
+noremap <Up> ddkP
+noremap <Down> ddp
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
