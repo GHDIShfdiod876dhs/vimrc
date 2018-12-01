@@ -32,6 +32,7 @@ filetype plugin on
 set path+=**
 set wildmenu
 filetype plugin indent on
+set hidden
 
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
