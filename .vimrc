@@ -34,9 +34,10 @@ set wildmenu
 filetype plugin indent on
 set hidden
 
-" case sensitivity
+" search settings
 set ignorecase
 set smartcase
+set incsearch
 
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
@@ -50,11 +51,6 @@ set noexpandtab
 set foldcolumn=4
 set hls
 set history=200
-
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
@@ -70,3 +66,4 @@ noremap <Down> ddp
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
