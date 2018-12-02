@@ -16,6 +16,7 @@ Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/nelstrom/vim-visual-star-search.git'
+Plug 'https://github.com/tpope/vim-abolish.git'
 call plug#end()
 
 " run powerline
@@ -67,3 +68,6 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
