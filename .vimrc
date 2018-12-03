@@ -71,3 +71,5 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
+
+:nnoremap <f5> :!ctags -R<CR>
