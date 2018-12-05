@@ -18,6 +18,7 @@ Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/nelstrom/vim-visual-star-search.git'
 Plug 'https://github.com/tpope/vim-abolish.git'
 Plug 'bigfish/vim-nodelint'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 " run powerline
