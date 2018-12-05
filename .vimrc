@@ -75,3 +75,5 @@ nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
 :nnoremap <f5> :!ctags -R<CR>
+
+set termguicolors " enable 24bit colors
