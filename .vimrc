@@ -43,6 +43,9 @@ set ignorecase
 set smartcase
 set incsearch
 
+" autocompletion settings
+set infercase
+
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
@@ -78,3 +81,4 @@ xnoremap & :&&<CR>
 :nnoremap <f5> :!ctags -R<CR>
 
 set termguicolors " enable 24bit colors
+set dictionary+=/usr/share/dict/words
