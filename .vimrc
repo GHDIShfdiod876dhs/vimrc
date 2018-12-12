@@ -20,6 +20,8 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 Plug 'bigfish/vim-nodelint'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'tomasr/molokai'
 call plug#end()
 
 " run powerline
@@ -51,8 +53,38 @@ set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set t_Co=256
 
-set softtabstop=3
-set shiftwidth=3
+" Set tabstop, softtabstop and shiftwidth to the same value w/ :Stab
+command! -nargs=* Stab call Stab()
+function! Stab()
+  let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+  if l:tabstop > 0
+    let &l:sts = l:tabstop
+    let &l:ts = l:tabstop
+    let &l:sw = l:tabstop
+  endif
+  call SummarizeTabs()
+endfunction
+
+function! SummarizeTabs()
+  try
+    echohl ModeMsg
+    echon 'tabstop='.&l:ts
+    echon ' shiftwidth='.&l:sw
+    echon ' softtabstop='.&l:sts
+    if &l:et
+      echon ' expandtab'
+    else
+      echon ' noexpandtab'
+    endif
+  finally
+    echohl None
+  endtry
+endfunction
+
+" default tab spacing
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set noexpandtab
 
 set foldcolumn=4
